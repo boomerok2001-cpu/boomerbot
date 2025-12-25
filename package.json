@@ -2,9 +2,9 @@
     "name": "polyhawk-bot-node",
     "version": "1.0.0",
     "description": "Telegram bot for Polymarket alerts",
-    "main": "bot_alerts.js",
+    "main": "boomer_bot.js",
     "scripts": {
-        "start": "node bot_alerts.js"
+        "start": "node boomer_bot.js"
     },
     "dependencies": {
         "axios": "^1.6.0",

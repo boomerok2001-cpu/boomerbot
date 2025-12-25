@@ -22,13 +22,15 @@ This guide will show you how to host your Telegram bot for **FREE** on **Render.
 ## ☁️ Phase 2: Deploy on Render
 
 1.  **Sign Up**: Go to [dashboard.render.com](https://dashboard.render.com/) and log in with GitHub.
-2.  **New Service**: Click **New +** -> **Web Service**.
+2.  **New Service**: Click **New +** -> **Web Service** (Do NOT choose background worker or static site).
 3.  **Connect Repo**: Select your `ok-boomer-bot` repository.
 4.  **Configure**:
     *   **Name**: `ok-boomer-bot`
-    *   **Region**: (Choose closest to you)
-    *   **Branch**: `main`
-    *   **Runtime**: `Node`
+    *   **Drag and drop these files** into the browser:
+        *   `package.json`
+        *   `boomer_bot.js`
+        *   `Dockerfile`
+        *   `README_DEPLOY.md`
     *   **Build Command**: `npm install`
     *   **Start Command**: `npm start`
     *   **Plan**: Select **Free**.
