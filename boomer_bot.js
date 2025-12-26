@@ -196,8 +196,6 @@ async function monitorMarkets() {
 // Alert Function
 async function sendAlert(market) {
     const question = market.question || 'Unknown Market';
-    const slug = market.slug || '';
-    const url = slug ? `https://polymarket.com/event/${slug}` : 'https://polymarket.com';
     const category = detectCategory(market);
 
     const categoryEmoji = {
@@ -213,8 +211,7 @@ async function sendAlert(market) {
 
     const msg = `🆕 **JUST LISTED** ${categoryEmoji}\n` +
         `━━━━━━━━━━━━━━\n` +
-        `📊 **${question}**\n\n` +
-        `🔗 [View on Polymarket](${url})`;
+        `📊 **${question}**`;
 
     // Broadcast to relevant subscribers
     for (const [chatId, prefs] of userPrefs.entries()) {
